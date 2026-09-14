@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>EGOIST.AUTO — Авто из Кореи, Китая и Японии</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+line-height:1.5;
+}
+
+:root{
+--red:#ff2b2b;
+--dark:#050505;
+--gray:#9c9c9c;
+--glass:rgba(255,255,255,0.04);
+--border:rgba(255,255,255,0.08);
+}
+
+.container{
+max-width:1440px;
+margin:0 auto;
+padding:0 40px;
+}
+
+section{
+padding:120px 0;
+position:relative;
+}
+
+h1{
+font-size:92px;
+line-height:0.95;
+font-weight:900;
+letter-spacing:-4px;
+margin-bottom:28px;
+}
+
+h2{
+font-size:58px;
+line-height:1;
+font-weight:800;
+letter-spacing:-2px;
+margin-bottom:24px;
+}
+
+h3{
+font-size:32px;
+font-weight:700;
+margin-bottom:18px;
+}
+
+h4{
+font-size:22px;
+font-weight:700;
+margin-bottom:12px;
+}
+
+p{
+font-size:18px;
+color:#c7c7c7;
+}
+
+.glass{
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:18px 34px;
+border-radius:18px;
+font-weight:600;
+text-decoration:none;
+transition:0.35s ease;
+cursor:pointer;
+}
+
+.btn-primary{
+background:var(--red);
+color:#fff;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+box-shadow:
+0 0 15px rgba(255,0,0,0.45),
+0 0 40px rgba(255,0,0,0.25);
+}
+
+.btn-secondary{
+border:1px solid rgba(255,255,255,0.12);
+color:#fff;
+}
+
+.btn-secondary:hover{
+border-color:var(--red);
+box-shadow:0 0 30px rgba(255,0,0,0.2);
+}
+
+.section-title{
+max-width:900px;
+margin-bottom:60px;
+}
+
+.red{
+color:var(--red);
+text-shadow:0 0 30px rgba(255,0,0,0.4);
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:1000;
+backdrop-filter:blur(20px);
+background:rgba(0,0,0,0.55);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.header-inner{
+height:92px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+}
+
+.logo{
+font-size:34px;
+font-weight:900;
+letter-spacing:-1px;
+}
+
+.logo span{
+color:var(--red);
+}
+
+nav{
+display:flex;
+gap:28px;
+}
+
+nav a{
+text-decoration:none;
+color:#d7d7d7;
+font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#fff;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding-top:120px;
+overflow:hidden;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:40px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:36px;
+max-width:720px;
+}
+
+.hero-buttons{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.hero-bullets{
+display:grid;
+gap:16px;
+}
+
+.hero-bullets div{
+display:flex;
+align-items:center;
+gap:12px;
+color:#dadada;
+}
+
+.dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:var(--red);
+box-shadow:0 0 20px red;
+}
+
+.hero-image{
+position:relative;
+}
+
+.hero-image img{
+width:100%;
+border-radius:30px;
+object-fit:cover;
+filter:brightness(0.72);
+}
+
+.glow{
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(255,0,0,0.14);
+filter:blur(120px);
+border-radius:50%;
+top:20%;
+right:5%;
+z-index:-1;
+}
+
+/* TRUST */
+
+.grid-4{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
+}
+
+.card{
+padding:36px;
+border-radius:28px;
+}
+
+.card-number{
+font-size:48px;
+font-weight:800;
+margin-bottom:18px;
+}
+
+/* CARS */
+
+.cars-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+}
+
+.car-card{
+border-radius:30px;
+overflow:hidden;
+transition:0.4s;
+}
+
+.car-card:hover{
+transform:translateY(-8px);
+}
+
+.car-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.car-content{
+padding:28px;
+}
+
+.economy{
+margin-top:18px;
+color:var(--red);
+font-size:22px;
+font-weight:700;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:24px;
+}
+
+.service-card{
+padding:34px;
+border-radius:28px;
+}
+
+/* GEO */
+
+.geo-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+/* STEPS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.step{
+padding:36px;
+border-radius:28px;
+}
+
+.step-number{
+font-size:70px;
+font-weight:900;
+color:rgba(255,255,255,0.08);
+margin-bottom:20px;
+}
+
+/* SOCIAL */
+
+.social-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+}
+
+.social-card{
+padding:28px;
+border-radius:28px;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+margin-bottom:20px;
+}
+
+.video-grid img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:18px;
+}
+
+/* FAQ */
+
+.faq{
+display:grid;
+gap:20px;
+}
+
+.faq-item{
+padding:32px;
+border-radius:24px;
+}
+
+/* FOOTER */
+
+footer{
+padding:80px 0;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.footer-grid p,
+.footer-grid a{
+font-size:15px;
+color:#9d9d9d;
+text-decoration:none;
+}
+
+/* ANIMATIONS */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1440px){
+
+h1{
+font-size:74px;
+}
+
+h2{
+font-size:48px;
+}
+
+}
+
+@media(max-width:991px){
+
+nav{
+display:none;
+}
+
+.hero-grid,
+.grid-4,
+.cars-grid,
+.services-grid,
+.geo-grid,
+.steps,
+.social-grid,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding-top:160px;
+}
+
+h1{
+font-size:58px;
+}
+
+h2{
+font-size:42px;
+}
+
+}
+
+@media(max-width:767px){
+
+.container{
+padding:0 22px;
+}
+
+h1{
+font-size:44px;
+}
+
+h2{
+font-size:34px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+
+.video-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:479px){
+
+h1{
+font-size:38px;
+}
+
+h2{
+font-size:30px;
+}
+
+p{
+font-size:16px;
+}
+
+.logo{
+font-size:24px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<div class="header-inner">
+
+<div class="logo">
+EGOIST<span>.AUTO</span>
+</div>
+
+<nav>
+<a href="#">Выгода</a>
+<a href="#">Каталог</a>
+<a href="#">Услуги</a>
+<a href="#">Этапы</a>
+<a href="#">Отзывы</a>
+<a href="#">FAQ</a>
+</nav>
+
+<a class="btn btn-primary" href="#">
+Заказать звонок
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-grid">
+
+<div class="reveal">
+
+<h1>
+В России — дорого,<br>
+в EGOIST.AUTO — <span class="red">доступно</span>
+</h1>
+
+<p>
+Закажите автомобиль из Кореи, Китая или Японии с выгодой до 30% от рыночной цены РФ.
+Пока другие переплачивают дилерам, наши клиенты получают топовые комплектации без пробега по СНГ.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn btn-primary">
+Рассчитать стоимость авто
+</a>
+
+<a href="#" class="btn btn-secondary">
+Смотреть обзоры в YouTube
+</a>
+
+</div>
+
+<div class="hero-bullets">
+
+<div>
+<span class="dot"></span>
+Честный пробег и прозрачная история
+</div>
+
+<div>
+<span class="dot"></span>
+Таможенная очистка без «серых» схем
+</div>
+
+<div>
+<span class="dot"></span>
+Утильсбор оплачивается сразу на ваше имя
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-image reveal">
+
+<div class="glow"></div>
+
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop" alt="">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+Опыт, подтвержденный сотнями выданных ключей
+</h2>
+
+</div>
+
+<div class="grid-4">
+
+<div class="card glass reveal">
+<div class="card-number">3.5</div>
+<p>Года возим авто через кризисы и изменения законодательства</p>
+</div>
+
+<div class="card glass reveal">
+<div class="card-number">1500+</div>
+<p>Привезенных и растаможенных автомобилей</p>
+</div>
+
+<div class="card glass reveal">
+<div class="card-number">0 ₽</div>
+<p>Скрытых комиссий. Цена фиксируется в договоре</p>
+</div>
+
+<div class="card glass reveal">
+<div class="card-number">14-20</div>
+<p>Дней средний срок доставки до Владивостока</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+Хватит кормить перекупов. Посмотрите на разницу в цене.
+</h2>
+
+</div>
+
+<div class="cars-grid">
+
+<div class="car-card glass reveal">
+
+<img src="https://images.unsplash.com/photo-1669231459944-2b2e9f06f25f?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<div class="car-content">
+
+<h3>Hyundai Palisade 2021</h3>
+
+<p>Цена в РФ: 5.2 млн ₽</p>
+<p>Цена через нас: 3.9 млн ₽</p>
+
+<div class="economy">
+Экономия: 1.3 млн ₽
+</div>
+
+</div>
+
+</div>
+
+<div class="car-card glass reveal">
+
+<img src="https://images.unsplash.com/photo-1617814076668-8df7f7b7df2c?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<div class="car-content">
+
+<h3>Geely Monjaro</h3>
+
+<p>Цена у дилера: 4.8 млн ₽</p>
+<p>Цена через нас: 3.6 млн ₽</p>
+
+<div class="economy">
+Экономия: 1.2 млн ₽
+</div>
+
+</div>
+
+</div>
+
+<div class="car-card glass reveal">
+
+<img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="">
+
+<div class="car-content">
+
+<h3>Toyota Alphard 2019</h3>
+
+<p>Цена в РФ: 4.5 млн ₽</p>
+<p>Цена через нас: 3.2 млн ₽</p>
+
+<div class="economy">
+Экономия: 1.3 млн ₽
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+Мы берем на себя всё. Вам остается только приехать в ГИБДД.
+</h2>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card glass reveal">
+<h3>Подбор и проверка</h3>
+<p>Осмотр экспертом, проверка ЛКП, диагностика и 100+ фото.</p>
+</div>
+
+<div class="service-card glass reveal">
+<h3>Торги и покупка</h3>
+<p>Выкупаем авто напрямую с аукционов и у дилеров.</p>
+</div>
+
+<div class="service-card glass reveal">
+<h3>Логистика</h3>
+<p>Страхование на всех этапах пути и бережная доставка.</p>
+</div>
+
+<div class="service-card glass reveal">
+<h3>Таможня «в белую»</h3>
+<p>Полная очистка, оформление ЭПТС и СБКТС.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+Ваш выбор не ограничен границами
+</h2>
+
+</div>
+
+<div class="geo-grid">
+
+<div class="card glass reveal">
+<h3>Южная Корея</h3>
+<p>Hyundai, Kia, BMW, Genesis. Идеальное состояние и левый руль.</p>
+</div>
+
+<div class="card glass reveal">
+<h3>Китай</h3>
+<p>Zeekr, Lixiang, Voyah, Geely. Новейшие технологии и электрокары.</p>
+</div>
+
+<div class="card glass reveal">
+<h3>Япония</h3>
+<p>Легендарная надежность и строгие аукционные листы.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+Прозрачность — основа доверия. Оплата в 3 этапа.
+</h2>
+
+</div>
+
+<div class="steps">
+
+<div class="step glass reveal">
+
+<div class="step-number">01</div>
+
+<h3>Договор и депозит</h3>
+
+<p>
+Заключаем агентский договор и фиксируем условия.
+</p>
+
+</div>
+
+<div class="step glass reveal">
+
+<div class="step-number">02</div>
+
+<h3>Инвойс за авто</h3>
+
+<p>
+Вы оплачиваете автомобиль напрямую в страну покупки.
+</p>
+
+</div>
+
+<div class="step glass reveal">
+
+<div class="step-number">03</div>
+
+<h3>Таможня и выдача</h3>
+
+<p>
+Получаете автомобиль во Владивостоке или своем городе.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+Мы работаем в прямом эфире
+</h2>
+
+</div>
+
+<div class="social-grid">
+
+<div class="social-card glass reveal">
+
+<div class="video-grid">
+
+<img src="https://images.unsplash.com/photo-1494905998402-395d579af36f?q=80&w=1200&auto=format&fit=crop" alt="">
+<img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&w=1200&auto=format&fit=crop" alt="">
+
+</div>
+
+<h3>YouTube</h3>
+
+<p>
+Смотрите видео-обзоры осмотренных и выданных авто.
+</p>
+
+</div>
+
+<div class="social-card glass reveal">
+
+<div class="video-grid">
+
+<img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" alt="">
+<img src="https://images.unsplash.com/photo-1549924231-f129b911e442?q=80&w=1200&auto=format&fit=crop" alt="">
+
+</div>
+
+<h3>Telegram</h3>
+
+<p>
+Ежедневные подборки автомобилей, которые можно купить прямо сейчас.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<h2>
+FAQ
+</h2>
+
+</div>
+
+<div class="faq">
+
+<div class="faq-item glass reveal">
+
+<h4>
+Что с утильсбором?
+</h4>
+
+<p>
+Мы везем авто на физическое лицо и соблюдаем все нормы законодательства.
+</p>
+
+</div>
+
+<div class="faq-item glass reveal">
+
+<h4>
+Какие гарантии, что машина будет целой?
+</h4>
+
+<p>
+Перед покупкой проводим детальный осмотр и фиксируем состояние.
+</p>
+
+</div>
+
+<div class="faq-item glass reveal">
+
+<h4>
+Как происходит оплата?
+</h4>
+
+<p>
+Работаем через банки-партнеры без задержек платежей.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h4>EGOIST.AUTO</h4>
+
+<p>ООО «ЭГОИСТ.АВТО»</p>
+<p>ИНН 5405513514</p>
+<p>ОГРН 1265400009082</p>
+
+</div>
+
+<div>
+
+<h4>Контакты</h4>
+
+<p>г. Новосибирск</p>
+<p>ул. Воинская 57</p>
+<p>ул. Красина 58/1</p>
+
+</div>
+
+<div>
+
+<h4>Соцсети</h4>
+
+<a href="#">YouTube</a><br><br>
+<a href="#">Telegram</a>
+
+</div>
+
+<div>
+
+<h4>Информация</h4>
+
+<p>Политика конфиденциальности</p>
+<p>Сайт носит информационный характер и не является публичной офертой</p>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+reveals.forEach(item=>{
+
+const top = item.getBoundingClientRect().top;
+const windowHeight = window.innerHeight;
+
+if(top < windowHeight - 80){
+item.classList.add('active');
+}
+
+});
+
+}
+
+window.addEventListener('scroll', revealOnScroll);
+
+revealOnScroll();
+
+</script>
+
+</body>
+</html>
